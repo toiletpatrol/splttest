@@ -1,0 +1,22 @@
+{
+  "name": "splttest",
+  "version": "1.0.0",
+  "description": "Test tasks from Splyt",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toiletpatrol/splttest.git"
+  },
+  "author": "Vasiliy Mamaevskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toiletpatrol/splttest/issues"
+  },
+  "homepage": "https://github.com/toiletpatrol/splttest#readme",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
