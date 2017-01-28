@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "engines" : { "node" : ">=7.4.0" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/toiletpatrol/splttest.git"
