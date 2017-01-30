@@ -1,5 +1,3 @@
-"use strict";
-
 // Meta Number
 function metaNumber(number, raw) {
   return (typeof raw == 'object') ? calc(number, raw.number, raw.operation) : number;

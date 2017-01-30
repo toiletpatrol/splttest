@@ -1,5 +1,3 @@
-"use strict";
-
 // from https://davidwalsh.name/javascript-arguments
 function getFunctionArgs (func) {
   var args = func.toString().match(/function\s.*?\(([^)]*)\)/)[1];

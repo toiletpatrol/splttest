@@ -1,5 +1,3 @@
-"use strict";
-
 module.exports = {
   sum: function (a, b) {
     return this.toDecimal(a) + this.toDecimal(b);
