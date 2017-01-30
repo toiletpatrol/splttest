@@ -2,7 +2,7 @@
 
 // Meta Number
 function metaNumber(number, raw) {
-  return (typeof raw == 'object') ? calc(raw.number, number, raw.operation) : number;
+  return (typeof raw == 'object') ? calc(number, raw.number, raw.operation) : number;
 }
 
 // Calculation
@@ -70,3 +70,5 @@ function times(number) {
 function dividedBy(number) {
   return {number, operation: '/'};
 }
+
+module.exports = { zero, one, two, three, four, five, six, seven, eight, nine, plus, minus, times, dividedBy };
