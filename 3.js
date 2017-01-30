@@ -1,23 +1,36 @@
-// from https://davidwalsh.name/javascript-arguments
+/**
+ * Parses function and return set of source function's parameters
+ * @author: https://davidwalsh.name/javascript-arguments
+ * @param {Function} func
+ * @return {Array}
+ */
 function getFunctionArgs (func) {
   var args = func.toString().match(/function\s.*?\(([^)]*)\)/)[1];
  
-  var a = args.split(',').map(function(arg) {
+  return args.split(',').map(function(arg) {
     return arg.replace(/\/\*.*\*\//, '').trim().replace(/=.*/, '');
   }).filter(function(arg) {
     return arg;
   });
-
-
-  return a;
 };
 
-// from http://stackoverflow.com/questions/3179861/javascript-get-function-body
+/**
+ * Extrudes function's body
+ * @author: http://stackoverflow.com/questions/3179861/javascript-get-function-body
+ * @param {Function} func
+ * @return {String}
+ */
 function getFunctionBody(func) {
   var entire = func.toString();
   return entire.toString().substring(entire.indexOf("{") + 1, entire.lastIndexOf("}"));
 }
 
+/**
+ * Modify recieved array of arguments. Appends default values to matching arguments
+ * @param {Array} args
+ * @param {Object} defaultArguments - like { a: 1, b: 1 }
+ * @return {Array}
+ */
 function appendDefaults (args, defaultArguments) {
   for (var i = 0; i < args.length; i++) {
     if (defaultArguments[args[i]]) {
@@ -30,6 +43,12 @@ function appendDefaults (args, defaultArguments) {
 
 module.exports = {
 
+  /**
+   * Modifies recieved function by adding default values to matching arguments.
+   * @param {Function} func - Source function
+   * @param {Object} defaultArguments
+   * @return {Function}
+   */
   defaultArguments: function(func, defaultArguments) {
     var args = getFunctionArgs(func);
     var body = getFunctionBody(func);

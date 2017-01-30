@@ -137,24 +137,24 @@ describe('Task 3 (3.js)', function() {
   describe('Schedules', function() {
 
     it(`Dude A's free spaces: [['11:30', '13:30'], ['17:30', '17:45']]`, function() {
-      var rightValue = [['11:30', '13:30'], ['17:30', '17:45']].toString();
+      var expectedValue = [['11:30', '13:30'], ['17:30', '17:45']].toString();
       var busy = new Schedule(schedules[0]);
       var spaces = busy.freeSpaces(); 
-      assert.equal(spaces.toArray().toString(), rightValue);
+      assert.equal(spaces.toArray().toString(), expectedValue);
     });
 
     it(`Dude B's free spaces: [['09:00', '09:15'], ['12:00', '14:00'], ['16:30', '17:00'], ['17:30', '19:00']]`, function() {
-      var rightValue = [['09:00', '09:15'], ['12:00', '14:00'], ['16:30', '17:00'], ['17:30', '19:00']].toString();
+      var expectedValue = [['09:00', '09:15'], ['12:00', '14:00'], ['16:30', '17:00'], ['17:30', '19:00']].toString();
       var busy = new Schedule(schedules[1]);
       var spaces = busy.freeSpaces(); 
-      assert.equal(spaces.toArray().toString(), rightValue);
+      assert.equal(spaces.toArray().toString(), expectedValue);
     });
 
     it(`Dude C's free spaces: [['09:00', '11:30'], ['12:15', '15:00'], ['16:30', '17:45']]`, function() {
-      var rightValue = [['09:00', '11:30'], ['12:15', '15:00'], ['16:30', '17:45']].toString();
+      var expectedValue = [['09:00', '11:30'], ['12:15', '15:00'], ['16:30', '17:45']].toString();
       var busy = new Schedule(schedules[2]);
       var spaces = busy.freeSpaces(); 
-      assert.equal(spaces.toArray().toString(), rightValue);
+      assert.equal(spaces.toArray().toString(), expectedValue);
     });
 
     it('Earliest time for meeting is 12:15', function() {
